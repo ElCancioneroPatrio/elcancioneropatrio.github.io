@@ -239,9 +239,6 @@ audio {
     width: 50%;
 }
 
-audio:focus {
-    outline: none;
-}
 
 audio::-webkit-media-controls-panel {
     background-color: var(--color-main);

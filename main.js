@@ -15,7 +15,7 @@ function scrollTo(element) {
     });
 }
 
-function scrollToElement(element) {
-    var cancion = document.getElementById("cancion" + element.id);
+function scrollToElement(id) {
+    var cancion = document.getElementById(id);
     scrollTo(cancion);
 }

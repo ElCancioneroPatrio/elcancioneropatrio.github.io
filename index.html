@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cancionero Patrio</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="icon" type="image/x-icon" href="./img/logo sello cd.png"/>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,26 +13,27 @@
     <header class="header">
         <div class="header-content">
             <div class="foto-principal"> <img src="./img/logo solo.png" alt="Logo El Cancionero Patrio"> </div>
-            <img src="./img/linea.png" alt="Separador el cancionero patrio">
+            <img class="separador display-pc" src="./img/linea.png" alt="Separador el cancionero patrio">
             <p>Los Elencos Estables de Argentina presentan <span>“El Cancionero Patrio”</span> <br> Grabado por más de 500 artistas <br> <span>Declarado de Interés Nacional – Decreto 345/2023</span></p>
         </div>
 
         <nav class="navbar">
-            <button>1 | HIMNO NACIONAL ARGENTINO</button>
-            <button>2 | SALVE ARGENTINA</button>
-            <button>3 | LA MARCHA DE SAN LORENZO</button>
-            <button>4 | HIMNO A SARMIENTO</button>
-            <button>5 | AURORA</button>
-            <button>6 | MARCHA DE LAS MALVINAS</button>
-            <button>7 | LA MARTÍN GÜEMES</button>
-            <button>8 | Himno al Libertador Gral. San Martín</button>
+            <button onclick="scrollToElement(this)" id="1">1 | HIMNO NACIONAL ARGENTINO</button>
+            <button onclick="scrollToElement(this)" id="2">2 | SALVE ARGENTINA</button>
+            <button onclick="scrollToElement(this)" id="3">3 | LA MARCHA DE SAN LORENZO</button>
+            <button onclick="scrollToElement(this)" id="4">4 | HIMNO A SARMIENTO</button>
+            <button onclick="scrollToElement(this)" id="5">5 | AURORA</button>
+            <button onclick="scrollToElement(this)" id="6">6 | MARCHA DE LAS MALVINAS</button>
+            <button onclick="scrollToElement(this)" id="7">7 | LA MARTÍN GÜEMES</button>
+            <button onclick="scrollToElement(this)" id="8">8 | Himno al Libertador Gral. San Martín</button>
         </nav>
     </header>
 
     <section class="canciones">
-        <div class="cancion">
+        <div class="cancion" id="cancion1">
             <h2>1 | HIMNO NACIONAL ARGENTINO – (Vicente López y Planes/Blas Parera)</h2>
-            <audio controls src="./audio/Himno Nacional MM.wav"></audio>
+            <iframe src="https://www.youtube.com/embed/7cywqdlY9Vg"> </iframe>
+            <audio src="./audio/Himno Nacional MM.wav" controls="true"></audio>
             <p>Interpretado por más de 500 artistas juntos por primera vez, integrantes de: <br> 
                 Banda Sinfónica Nacional de Ciegos “Pascual Grisolía”, 
                 Coro Nacional de Música Argentina, 
@@ -42,10 +45,46 @@
                 Programa Escuela de Canto Coral. <br>
                 Participan en video: Ballet Folklórico Nacional y Compañía Nacional de Danza Contemporánea.</p>
         </div>
+        <div class="cancion" id="cancion2">
+            <h2>2 | SALVE ARGENTINA</h2>
+            <audio src="./audio/Bandera MM.wav" controls="true"></audio>
+            <p>Interpretado por el Coro Nacional de Niños (Leopoldo Corretjer) <br> Por el Coro Nacional de Niños dirigido por María Isabel Sanz. Piano: Natalia Suriano.</p>
+        </div>
+        <div class="cancion" id="cancion3">
+            <h2>3 | LA MARCHA DE SAN LORENZO</h2>
+            <audio src="./audio/Bandera MM.wav" controls="true"></audio>
+            <p>(Cayetano Alberto Silva/Carlos Javier Benielli) <br> interpretado por el Coro Polifónico Nacional de Ciegos,  junto a la Orquesta invitada  “Sinfónica Juvenil José de San Martin” </p>
+        </div>
+        <div class="cancion" id="cancion4">
+            <h2>4 | HIMNO A SARMIENTO</h2>
+            <audio src="./audio/Sarmiento MM.wav" controls="true"></audio>
+            <p>(Francisco Colecchia/Leopoldo Corretjer) <br> Por el Coro Polifónico Nacional dirigido por Antonio Domenighini. Piano: Claudio Santoro</p>
+        </div>
+        <div class="cancion" id="cancion5">
+            <h2>5 | AURORA</h2>
+            <audio src="./audio/Aurora  MM.wav" controls="true"></audio>
+            <p>Aria de la ópera de igual nombre (Héctor Panizza/Luigi Illica) <br> Por la Orquesta Sinfónica Nacional. Solista: Sebastián Russo (tenor), integrante del Coro Polifónico Nacional. 
+            </p>
+        </div>
+        <div class="cancion" id="cancion6">
+            <h2>6 | MARCHA DE LAS MALVINAS</h2>
+            <audio src="./audio/Malvinas MM.wav" controls="true"></audio>
+            <p>(José Tieri/Carlos Obligado) <br> Por la Orquesta Nacional de Música Argentina Juan de Dios Filiberto y el Coro Nacional de Música Argentina. </p>
+        </div>
+        <div class="cancion" id="cancion7">
+            <h2>7 | LA MARTÍN GÜEMES</h2>
+            <audio src="./audio/La Martin Guemes MM.wav" controls="true"></audio>
+            <p>(Adolfo Ábalos/León Benarós) <br> Por la Orquesta Nacional de Música Argentina Juan de Dios Filiberto y el Coro Nacional de Música Argentina.</p>
+        </div>
+        <div class="cancion" id="cancion8">
+            <h2>8 | Himno al Libertador Gral. San Martín</h2>
+            <audio src="./audio/Himno San martin MM.wav" controls="true"></audio>
+            <p>(Arturo Luzzati/Segundo Argañaraz) <br> Por la Orquesta Sinfónica Juvenil Nacional José de San Martín y el Coro Polifónico Nacional.</p>
+        </div>
     </section>
 
     <section class="texto">
-        <p>Las palabras rubricadas en el decreto presidencial N° 345/2023 lo dicen de un modo formal: <br>
+        <p> <span>Las palabras rubricadas en el decreto presidencial N° 345/2023 lo dicen de un modo formal:</span>  <br>
             “Este proyecto reunió por primera vez a todos los elencos estables, por ser las orquestas y coros más importantes del país, y demandó un profundo trabajo de revisión de arreglos para respetar las consideraciones oficiales en cuanto a tonalidades y partituras de referencia, con la tecnología más avanzada, y adaptar cada una de ellas a las características de los elencos participantes. 
             La iniciativa constituye un aporte a la cultura y tiene por objetivo destacar la importancia de aquellas canciones e himnos que nos representan y son un punto de encuentro para todo el pueblo argentino.” </p>
         <p>Pero quienes trabajamos en esto e hicimos nuestro aporte de alguna manera (gestores, productores, técnicos, instrumentistas, cantantes, directores, administrativos) sabemos que es en realidad el resultado de un profundo deseo, un sueño largamente anhelado, un objetivo cumplido. El de registrar nuestras bellísimas canciones patrias por los artistas de la Dirección Nacional de Elencos Estables, del Ministerio de Cultura de la Nación, para ponerlas a disposición de las escuelas de todo el país y de todos los argentinos. El desafío era importante, porque se trataba a la vez de respetar las versiones oficiales y de obtener el mejor y más profesional resultado técnico y artístico con más de 500 artistas. Y por eso, convocamos además al estudio de Oscar Mediavilla que hizo la curaduría y puso a disposición del proyecto su estudio de grabación y edición con el moderno sistema Dolby Atmos.</p>
@@ -56,15 +95,17 @@
     </section>
 
     <section class="creditos">
-        <p> <span>Dirección Musical: Mtro. Invitado Gustavo Fontana</span> <br>
-            <span>Producción musical, Registro, edición y curaduría: Oscar Mediavilla</span> <br>
-            <span>Dirección, idea y Producción general: Mariela Bolatti</span> <br>
-            <span>Producción artística: Roberto López</span>
+        <p> <span>Dirección Musical:</span> Mtro. Invitado Gustavo Fontana <br>
+            <span>Producción musical, Registro, edición y curaduría:</span> Oscar Mediavilla <br>
+            <span>Dirección, idea y Producción general:</span> Mariela Bolatti <br>
+            <span>Producción artística:</span> Roberto López
     </section>
 
     <footer>
         <img src="./img/logos sponsors.png" alt="Sponsors El Cancionero Patrio">
     </footer>
+
+    <script src="./main.js"></script>
     
 </body>
 </html>

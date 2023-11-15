@@ -1,3 +1,11 @@
+:root {
+    --color-main: #f2ede7;
+    --color-secondary: #895236;
+    --color-text: #666664;
+    --color-arg: #72b1e2;
+    --color-dark-blue: #2e3355;
+}
+
 @font-face {
     font-family: "recoleta";
     src: url("./fonts/Recoleta-Regular.ttf");
@@ -7,6 +15,11 @@
     font-family: "recoleta";
     src: url("./fonts/Recoleta-Bold.ttf");
     font-weight: bold;
+}
+@font-face {
+    font-family: "recoleta";
+    src: url("./fonts/Recoleta-Medium.ttf");
+    font-weight: medium;
 }
 
 /* Bases */
@@ -31,4 +44,328 @@ body {
     font-size: 1.6rem;
     line-height: 1.6;
     font-weight: normal;
+    background-color: var(--color-main);
+}
+
+/* Selection */
+::-moz-selection {
+    background: var(--color-secondary);
+    color: var(--color-main);
+}
+::selection {
+    background: var(--color-secondary);
+    color: var(--color-main);
+}
+
+/* Displays */
+.display-mobile {
+    display: block !important;
+  }
+  
+  .display-pc {
+    display: none !important;
+  }
+  
+  @media only screen and (min-width: 768px) {
+    .display-mobile {
+      display: none !important;
+    }
+    .display-pc {
+      display: flex !important;
+    }
+  }
+
+/* Header */
+.header {
+    margin-top: 10rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.header::before {
+    content: "";
+    background-image: url(./img/destellos.png);
+    background-size: cover;
+    width: 40rem;
+    height: 40rem;
+    position: absolute;
+    top: -10rem;
+    left: 0;
+}
+
+.header-content {
+    width: 95%;
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header-content div {
+    width: 25%;
+}
+
+.header-content div img {
+    width: 100%;
+}
+
+.header-content p {
+    font-size: 3rem;
+    color: var(--color-text);
+}
+
+.header-content p span {
+    font-weight: bold;
+}
+
+.separador {
+    height: 70vh;
+}
+
+.navbar {
+    width: 70%;
+    margin: 5rem auto 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-flow: wrap;
+    justify-content: center;
+}
+
+.navbar button {
+    background-color: var(--color-dark-blue);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: .3s ease;
+}
+
+.navbar button:hover {
+    background-color: var(--color-arg);
+    box-shadow: 0px 1px 8px -1px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 1px 8px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 1px 8px -1px rgba(0,0,0,0.75);
+}
+
+@media only screen and (max-width: 1280px) {
+    .header-content p {
+        font-size: 2rem;
+    }
+    .header::before {
+        width: 20rem;
+        height: 20rem;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .header {
+        margin: 5rem auto 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .header-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+    }
+
+    .header-content div {
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    .header-content div img {
+        width: 100%;
+    }
+    
+    .header-content p {
+        font-size: 2rem;
+        margin-top: 7rem;
+        width: 90%;
+        text-align: center;
+    }
+
+    .navbar {
+        flex-flow: column;
+    }
+}
+
+/* Canciones */
+.canciones {
+    width: 70%;
+    margin: 10rem auto 0;
+}
+
+.cancion {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cancion h2 {
+    color: var(--color-dark-blue);
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.cancion p {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2.5rem;
+    line-height: 3rem;
+    color: var(--color-secondary);
+}
+
+audio {
+    width: 50%;
+}
+
+audio:focus {
+    outline: none;
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: var(--color-main);
+}
+
+audio::-webkit-media-controls-play-button {
+    color: #fff;
+    background-color: var(--color-arg);
+    border-radius: 50%;
+}
+
+audio::-webkit-media-controls-timeline {
+    background-color: #96c7ed;
+    border-radius: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+audio::-webkit-media-controls-volume-slider {
+    background-color: var(--color-arg);
+    border-radius: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+audio::-webkit-media-controls-mute-button {
+    background-color: var(--color-arg);
+    border-radius: 50%;
+}
+
+iframe {
+    width: 720px;
+    height: 405px;
+    border:none; 
+    border-radius: 15px;
+    margin: 3rem auto;
+}
+
+.texto {
+    width: 70%;
+    margin: 5rem auto 0;
+    text-align: center;
+    color: var(--color-text);
+    font-size: 2.5rem;
+    font-weight: medium;
+}
+.texto span {
+    font-weight: bold;
+}
+
+.creditos {
+    width: 70%;
+    margin: 5rem auto 0;
+    text-align: center;
+}
+
+.creditos p {
+    color: var(--color-secondary);
+    font-size: 2.5rem;
+}
+
+.creditos p span {
+    color: var(--color-dark-blue);
+    font-weight: bold;
+}
+
+footer {
+    width: 70%;
+    margin: 10rem auto 5rem;
+}
+
+footer img {
+    width: 100%;
+}
+
+@media only screen and (max-width: 1280px) {
+    audio {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .canciones {
+        width: 90%;
+        margin: 5rem auto 0;
+    }
+    
+    .cancion {
+        margin-top: 3rem;
+    }
+    
+    .cancion h2 {
+        text-align: center;
+        font-size: 2.5rem;
+    }
+    
+    .cancion p {
+        font-size: 2rem;
+    }
+    iframe {
+        width: 90vw;
+        height: calc((90vw * 9) / 16);
+    }
+    audio {
+        width: 100%;
+    }
+    .texto {
+        width: 90%;
+        font-size: 2rem;
+        text-align: justify;
+        text-indent: 1rem;
+    }
+    .creditos {
+        width: 90%;
+    }
+    .creditos p {
+        font-size: 2rem;
+    }
+    
+    .creditos p span {
+        font-weight: bold;
+    }
+    
+    footer {
+        width: 90%;
+    }
 }

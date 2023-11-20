@@ -166,6 +166,30 @@ body {
     -moz-box-shadow: 0px 1px 8px -1px rgba(0, 0, 0, 0.75);
 }
 
+.navbar a {
+    position: relative;
+    background-color: var(--color-dark-blue);
+    border: none;
+    color: white;
+    padding: 11px 25px 11px 45px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 15px;
+    transition: .3s ease;
+}
+
+.navbar a:hover {
+    background-color: var(--color-arg);
+    box-shadow: 0px 1px 8px -1px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 1px 8px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 1px 8px -1px rgba(0, 0, 0, 0.75);
+}
+
 @media only screen and (max-width: 1280px) {
     .header-content p {
         font-size: 2rem;
@@ -455,4 +479,11 @@ footer img {
 
 #myBtn:hover {
     background-color: var(--color-dark-blue);
+}
+
+.icon-logo {
+    width: 2rem;
+    position: absolute;
+    left: 17px;
+    top: 25%;
 }

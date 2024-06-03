@@ -1,0 +1,80 @@
+.header {
+    margin: 0;
+    background-color: $color-beige;
+    position: relative;
+
+    .header-content {
+        background-color: $color-beige;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        padding: 5.2vw;
+
+        .main-image {
+            width: 28%;
+        }
+
+        &>img {
+            height: 70vh;
+        }
+
+        p {
+            font-size: 1.6vw;
+            color: $color-text;
+
+            span {
+                font-weight: bold;
+            }
+        }
+    }
+
+    .header-effects {
+        .left {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 20%;
+        }
+
+        .end {
+            position: absolute;
+            bottom: -5rem;
+            left: 0;
+            width: 100%;
+        }
+        
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .header {
+        .header-content {
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            padding: 6rem 0 3rem;
+    
+            .main-image {
+                width: 80%;
+            }
+    
+            p {
+                width: 90%;
+                font-size: 2rem;
+                text-align: center;
+                margin-top: 6rem;
+            }
+        }
+    
+        .header-effects {
+            .left {
+                width: 40%;
+            }
+    
+            .end {
+                bottom: -3rem;
+            }
+        }
+    }
+}

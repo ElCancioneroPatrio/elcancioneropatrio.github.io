@@ -1,0 +1,284 @@
+.credits {
+    position: relative;
+    background-color: $color-light-blue;
+    padding: 5vh 0;
+
+    .credits-devider {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: -4.3rem;
+    }
+
+    .container {
+        color: #fff;
+
+        .credits-elencos {
+            h2 {
+                font-size: 5rem;
+                font-weight: bold;
+                margin: 0 0 2rem;
+            }
+
+            p {
+                font-size: 2.6rem;
+                margin: 0;
+                position: relative;
+                z-index: 6;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    bottom: 1rem;
+                    left: -3rem;
+                    width: 2rem;
+                    height: 2rem;
+                    border-radius: 2rem;
+                    background-color: #ffffff1e;
+                    z-index: -1;
+                    transition: .3s ease-in-out;
+                }
+            }
+
+            #elenco-01 {
+                &::before {
+                    background-color: #0c704e;
+                }
+            }
+
+            #elenco-02 {
+                &::before {
+                    background-color: #e87a3d;
+                }
+            }
+
+            #elenco-03 {
+                &::before {
+                    background-color: #f9c54d;
+                }
+            }
+
+            #elenco-04 {
+                &::before {
+                    background-color: #d5231a;
+                }
+            }
+
+            #elenco-05 {
+                &::before {
+                    background-color: #ca4476;
+                }
+            }
+
+            #elenco-06 {
+                &::before {
+                    background-color: #4eade3;
+                }
+            }
+
+            #elenco-07 {
+                &::before {
+                    background-color: #034e92;
+                }
+            }
+
+            #elenco-08 {
+                &::before {
+                    background-color: #8e2770;
+                }
+            }
+
+            #elenco-09 {
+                &::before {
+                    background-color: #b6ade4;
+                }
+            }
+
+            #elenco-10 {
+                &::before {
+                    background-color: #606060;
+                }
+            }
+        }
+
+        .credits-buttons {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 1rem;
+            margin-top: 3rem;
+
+            a {
+                padding: 1.5rem 3rem;
+                margin: 0;
+                color: #fff;
+                font-size: 2rem;
+                background: rgb(24, 115, 235);
+                background: linear-gradient(45deg, rgba(24, 115, 235, 1) 0%, rgba(39, 45, 83, 1) 45%);
+                background-size: 250%;
+                background-position: 100%;
+                transition: .15s ease-in-out;
+
+                &:first-of-type {
+                    border-radius: 2rem 0 0 2rem;
+                    background: rgb(247, 0, 77);
+                    background: linear-gradient(45deg, rgba(247, 0, 77, 1) 0%, rgba(39, 45, 83, 1) 45%);
+                    background-size: 250%;
+                    background-position: 100%;
+                }
+
+                &:last-of-type {
+                    border-radius: 0 2rem 2rem 0;
+                    background: rgb(144, 24, 235);
+                    background: linear-gradient(45deg, rgba(144, 24, 235, 1) 0%, rgba(39, 45, 83, 1) 45%);
+                    background-size: 250%;
+                    background-position: 100%;
+                }
+
+                &:hover {
+                    background-position: 0%;
+                }
+            }
+        }
+
+        .names {
+            margin-top: 5vh;
+
+            p {
+                font-size: 3rem;
+                margin: 0;
+                color: $color-dark-blue;
+
+                span {
+                    color: #fff;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .advisors {
+            h4 {
+                font-size: 3rem;
+                margin: 0;
+            }
+
+            p {
+                font-size: 2.6rem;
+                margin: 0;
+                color: $color-dark-blue;
+            }
+        }
+
+        .end {
+            text-align: center;
+            font-size: 3rem;
+            margin: 5rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .credits {
+        .container {
+
+            .credits-elencos {
+                h2 {
+                    font-size: 4rem;
+                }
+
+                p {
+                    font-size: 2.5rem;
+                }
+            }
+
+            .names {
+                margin-top: 5vh;
+
+                p {
+                    font-size: 2.5rem;
+                }
+            }
+
+            .advisors {
+                h4 {
+                    font-size: 2.5rem;
+                }
+
+                p {
+                    font-size: 2.3rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .credits {
+        padding: 5vh 0;
+
+
+        .container {
+
+            .credits-elencos {
+                h2 {
+                    font-size: 3rem;
+                }
+
+                p {
+                    font-size: 2rem;
+                    line-height: 2.2rem;
+                    text-align: center;
+                    margin-bottom: 1.5rem;
+
+                    &::before {
+                        height: 0;
+                    }
+
+                    &:hover::before {
+                        width: 0;
+                    }
+                }
+            }
+
+            .credits-buttons {
+                flex-direction: column;
+
+                a {
+                    border-radius: 2rem;
+                    &:first-of-type {
+                        border-radius: 2rem;
+                    }
+
+                    &:last-of-type {
+                        border-radius: 2rem;
+                    }
+                }
+            }
+
+            .names {
+                margin-top: 5vh;
+
+                p {
+                    font-size: 2rem;
+                }
+            }
+
+            .advisors {
+                h4 {
+                    font-size: 2rem;
+                }
+
+                p {
+                    font-size: 1.9rem;
+                }
+            }
+
+            .end {
+                margin: 3rem 0 4rem;
+                text-align: center;
+                font-size: 2rem;
+            }
+        }
+    }
+}

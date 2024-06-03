@@ -1,0 +1,59 @@
+.about {
+    position: relative;
+    background-color: $color-beige;
+
+    .about-divider {
+        position: absolute;
+        width: 100%;
+        top: -4.5rem;
+        left: 0;
+    }
+
+    .about-content {
+        color: $color-text;
+
+        h2 {
+            font-size: 5rem;
+            padding-top: 3rem;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 2.5rem;
+            text-align: center;
+            width: 85%;
+            margin: 2.3rem auto;
+
+            span {
+                font-weight: bold;
+            }
+        }
+
+        .about-end {
+            text-align: end;
+            padding: 4rem 0 6rem;
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .about {
+        .about-content {
+            h2 {
+                font-size: 3rem;
+                padding-top: 2.8rem;
+            }
+    
+            p {
+                font-size: 2rem;
+                width: 100%;
+                margin: 2rem auto;
+            }
+
+            .about-end {
+                padding: 2rem 0 6rem;
+            }
+        }
+    }
+}

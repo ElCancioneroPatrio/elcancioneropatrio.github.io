@@ -1,0 +1,255 @@
+.nav {
+    margin-top: 13vh;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 2rem;
+
+    .nav-buttons {
+        a {
+            width: 100%;
+            margin-bottom: 2rem;
+            aspect-ratio: 1;
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            background: rgb(60,160,211);
+            background: linear-gradient(45deg, rgba(60,160,211,1) 0%, rgba(39,45,83,1) 45%);
+            background-size: 250%;
+            background-position: 100%;
+            border-radius: 2rem;
+            transition: .15s ease-in-out;
+
+            .first {
+                width: 40%;
+            }
+
+            .second {
+                width: 60%;
+            }
+
+            &:hover {
+                background-position: 0%;
+            }
+        }
+
+        button {
+            width: 100%;
+            background: rgb(60,160,211);
+            background: linear-gradient(45deg, rgba(60,160,211,1) 0%, rgba(39,45,83,1) 45%);
+            background-size: 250%;
+            background-position: 100%;
+            border-radius: 2rem;
+            border: none;
+            transition: .15s ease-in-out;
+
+            &:first-of-type {
+                margin-bottom: 1rem;
+            }
+
+            p {
+                font-weight: bold;
+                font-size: 2.5rem;
+                color: #fff;
+            }
+
+            &:hover {
+                background-position: 0%;
+            }
+        }
+    }
+
+    .nav-songs {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .nav-song-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            background-color: $color-dark-blue;
+            border: none;
+            border-radius: 2rem;
+            transition: .2s ease-in-out;
+
+            .song-left {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: 2.5rem;
+
+                p {
+                    color: #fff;
+                    margin: 0;
+                    margin-right: 2rem;
+                    font-size: 2.5rem;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                }
+            }
+
+            .song-right {
+                margin-right: 2rem;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                gap: 1rem;
+
+                div {
+                    width: 2.2rem;
+                    aspect-ratio: 1;
+                    border-radius: 50%;
+                }
+
+                #dot-01 {
+                    background-color: #0c704e;                
+                }
+                #dot-02 {
+                    background-color: #e87a3d;
+                }
+                #dot-03 {
+                    background-color: #f9c54d;
+                }
+                #dot-04 {
+                    background-color: #d5231a;
+                }
+                #dot-05 {
+                    background-color: #ca4476;
+                }
+                #dot-06 {
+                    background-color: #4eade3;
+                }
+                #dot-07 {
+                    background-color: #034e92;
+                }
+                #dot-08 {
+                    background-color: #8e2770;
+                }
+                #dot-09 {
+                    background-color: #b6ade4;
+                }
+                #dot-10 {
+                    background-color: #606060;
+                }
+                #dot-11 {
+                    background-color: #07656d;
+                }
+            }
+
+            &::after {
+                content: "";
+                background-color: $color-light-blue;
+                height: 100%;
+                width: 0rem;
+                position: absolute;
+                left: 0;
+                transition: .2s ease-in-out;
+            }
+
+            &:hover {
+                &::after {
+                    width: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .nav {
+        margin-top: 13vh;
+        gap: 1.5rem;
+    
+        .nav-buttons {
+            a {
+                margin-bottom: 1.5rem;
+    
+                .first {
+                    width: 35%;
+                }
+    
+                .second {
+                    width: 55%;
+                }
+            }
+    
+            button {
+                p {
+                    font-size: 2rem;
+                }
+            }
+        }
+    
+        .nav-songs {
+    
+            .nav-song-container {
+                .song-left {
+                    padding: 2rem;
+    
+                    p {
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .nav {
+        margin-top: 13vh;
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 1rem;
+    
+        .nav-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+
+            a {
+                margin-bottom: 0;
+            }
+    
+            button {
+    
+                p {
+                    font-size: 2rem;
+                }
+
+                &:first-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    
+        .nav-songs {
+            gap: 1rem;
+    
+            .nav-song-container {
+    
+                .song-left {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 2.5rem;
+    
+                    p {
+                        font-size: 2rem;
+                    }
+                }
+    
+                .song-right {
+                    display: none;
+                }
+            }
+        }
+    }
+}
